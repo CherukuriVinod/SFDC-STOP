@@ -1,0 +1,79 @@
+<template>
+    <lightning-card title="ToDo List" style="width: 100%;">
+        <lightning-button-icon
+            slot="actions"
+            icon-name="utility:sync"
+            variant="brand"
+            alternative-text="Sync"
+            title="Sync"
+        >
+        </lightning-button-icon>
+
+        <!-- Lightning Card and sync action and padding-->
+
+        <lightning-layout>
+            <lightning-layout-item padding="around-small" size="12">
+                <ul class="slds-has-dividers_around-space">
+                    <template for:each={todoTasks} for:item="todoTask"> <!-- This line is taking the todoTask array from the JavaScript and it assigning each -->
+                                                                            <!--Here We used Template tag is required because, I want to iterate an array here
+                                                                            that is why template tag is required and this todoTasks (array) which is
+                                                                           binded here in for:each attribute automatically assigning each Object out of this array
+                                                                            into the Todo task variable  --> 
+                        <li class="slds-item" key={todoTask.id}>
+                            <lightning-layout
+                                vertical-align="center"
+                                horizontal-align="spread"
+                            >
+                                <lightning-layout-item padding="horizontal-small">
+                                    {todoTask.name}
+                                </lightning-layout-item>
+                                
+                                <lightning-layout-item padding="horizontal-small">
+                                    <lightning-button-icon
+                                        icon-name="utility:delete"
+                                        alternative-text="Delete"
+                                        title="Delete"
+                                    ></lightning-button-icon>
+                                </lightning-layout-item>
+
+                                <!-- Delete button Will appear after entering value in the input field-->
+
+                            </lightning-layout>
+                        </li>
+                    </template>
+                </ul>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <!-- Closing the Tags-->
+
+        <p slot="footer">
+            <lightning-layout pull-to-boundary="small">
+                <lightning-layout-item padding="horizontal-small" flexibility="grow">
+                    <lightning-input
+                        type="text"
+                        placeholder="Enter new task"
+                        variant="label-hidden"
+                        value={newTask}
+                        label="New Task"
+                        onchange={updateNewTask}
+                        required
+                    >
+                    </lightning-input>
+                    <!-- Input Text Field For Entering Task-->
+
+                </lightning-layout-item>
+
+                <lightning-layout-item padding="horizontal-small">
+                    <lightning-button
+                        variant="brand"
+                        label="Add"
+                        onclick={addTaskToList}
+                    >
+                    </lightning-button>
+                </lightning-layout-item>
+                <!-- Added Add Button -->
+            </lightning-layout>
+        </p>
+    </lightning-card>
+</template>

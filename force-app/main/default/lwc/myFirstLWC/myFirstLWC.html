@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title=  "My First LWC Component" icon-name="custom:custom14">
+        <div class="slds-p-around_small" style="min-width: 10rem">
+            <lightning-input
+                label="Write Your Name"
+                value={name}
+                onchange={changeHandler}
+            ></lightning-input>
+            <br/>
+           Your Input Value Will Be Displayed HERE: {name}
+        </div>
+    </lightning-card>
+</template>

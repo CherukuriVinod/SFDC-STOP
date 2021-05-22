@@ -1,0 +1,14 @@
+<template>
+  <lightning-card title="HelloWorld">
+    <div class="slds-p-around_small" style="min-width: 10rem">
+        
+      <lightning-input 
+        label="My World" 
+        value={name} 
+        onchange={changeHandler}
+      ></lightning-input>
+        <br/>
+        {name}
+    </div>
+  </lightning-card>
+</template>

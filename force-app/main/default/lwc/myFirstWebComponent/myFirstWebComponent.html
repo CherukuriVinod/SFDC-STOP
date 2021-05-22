@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="ContactInformation" icon-name="add_contact">
+        <div class="slds-m-around_medium">
+            <template for:each={contacts} for:item="contact">
+                <div key={contact.Id}>
+                   <p> <strong>ContactName:</strong> {contact.Name}, <strong>Department:</strong> {contact.Title}</p><br/>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
