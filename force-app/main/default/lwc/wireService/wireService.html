@@ -26,13 +26,15 @@
                                 </lightning-layout-item>
                                 <lightning-layout-item padding="horizontal-small">
                                     <!-- Button to delete/remove the task from the list -->
-                                    <lightning-button-icon
-                                        icon-name="utility:delete"
+                                    <lightning-icon
+                                        icon-name="action:delete"
                                         alternative-text="Delete"
+                                        size="small"
+                                        title="Delete"
                                         onclick={deleteTaskFromList}
                                         name={todoTask.id}
-                                        title="Delete">
-                                    </lightning-button-icon>
+                                        >
+                                    </lightning-icon>
                                 </lightning-layout-item>
                             </lightning-layout>
                         </li>
