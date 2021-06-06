@@ -15,7 +15,7 @@
         <lightning-layout>
             <lightning-layout-item size="12" padding="around-small">
                 <template if:true={processing}>
-                    <lightning-spinner alternative-text="Loading Data" size="small"></lightning-spinner>
+                    <lightning-spinner variant="brand" alternative-text="Loading Data" size="small"></lightning-spinner>
             </template>
                 <!-- Iterating the ToDo Tasks and displaying them in a list -->
                 <ul class="slds-has-dividers_around-space">
@@ -61,11 +61,11 @@
                 <!-- Button to add New Task to the ToDo List -->
                 <lightning-layout-item padding="horizontal-small">
                     <lightning-icon
-                        icon-name="action:new_task"
-                        alternative-text="newTask"
+                        icon-name="action:new"
+                        alternative-text="new"
                         size="small"
-                        label="newTask"
-                        title="NewTask"
+                        label="new"
+                        title="New"
                         onclick={addTaskToList}>
                     </lightning-icon>
                 </lightning-layout-item>
