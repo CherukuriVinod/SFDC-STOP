@@ -2,14 +2,15 @@
     <!-- Lightning Card -->
     <lightning-card title="ToDo List" style="width: 100%;">
         <!-- Sync Action -->
-        <lightning-button-icon
-            variant="brand"
-            slot="actions"
-            icon-name="utility:sync"
+        <lightning-icon
+            icon-name="action:refresh"
             alternative-text="Refresh"
+            slot="actions"
+            size="small"
+            title="Refresh"
             onclick={refreshTodoList}
-            title="Refresh">
-        </lightning-button-icon>
+            >
+        </lightning-icon>
         
         <lightning-layout>
             <lightning-layout-item size="12" padding="around-small">
@@ -59,11 +60,14 @@
                 </lightning-layout-item>
                 <!-- Button to add New Task to the ToDo List -->
                 <lightning-layout-item padding="horizontal-small">
-                    <lightning-button
-                        variant="brand"
-                        label="Add"
+                    <lightning-icon
+                        icon-name="action:new_task"
+                        alternative-text="newTask"
+                        size="small"
+                        label="newTask"
+                        title="NewTask"
                         onclick={addTaskToList}>
-                    </lightning-button>
+                    </lightning-icon>
                 </lightning-layout-item>
             </lightning-layout>
         </p>
