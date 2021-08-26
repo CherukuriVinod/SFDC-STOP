@@ -1,4 +1,4 @@
-public class ToDoControlleer {
+public with sharing class ToDoControlleer {
   //Add a new item in ToDo__c object
   //Accepts serialized ToDo object
   @AuraEnabled
