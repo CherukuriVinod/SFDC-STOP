@@ -1,11 +1,11 @@
 public class ToDoControlleer {
-        //Add a new item in ToDo__c object
-        //Accepts serialized ToDo object
-        @AuraEnabled
-        public static String addTodo(String payload) {
-          ToDo payloadObject = (ToDo) JSON.deserialize(payload, ToDo.class);
+  //Add a new item in ToDo__c object
+  //Accepts serialized ToDo object
+  @AuraEnabled
+  public static String addTodo(String payload) {
+  ToDo payloadObject = (ToDo) JSON.deserialize(payload, ToDo.class);
       
-          SObject todo = (Sobject) Type.forName('ToDo__c').newInstance();
+  SObject todo = (Sobject) Type.forName('ToDo__c').newInstance();
           todo.put('Name', payloadObject.todoName);
           todo.put('Done__c', payloadObject.done);
       
@@ -84,4 +84,4 @@ public class ToDoControlleer {
           @AuraEnabled
           public Boolean done;
         }
-      }
+}

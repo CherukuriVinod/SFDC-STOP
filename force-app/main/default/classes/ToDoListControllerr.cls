@@ -23,8 +23,7 @@ public inherited sharing class ToDoListControllerr {
     }
 
     /*
-    *	Author:- Rahul Malhotra
-    *	Description:- This method is used to delete a task from Salesforce based on the record id
+    Description:- This method is used to delete a task from Salesforce based on the record id
     */
     @AuraEnabled
     public static Boolean deleteTask(Id recordId) {
@@ -36,5 +35,4 @@ public inherited sharing class ToDoListControllerr {
         }
         return false;
     }
-
 }
