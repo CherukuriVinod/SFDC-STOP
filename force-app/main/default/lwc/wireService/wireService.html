@@ -1,5 +1,4 @@
 <template>
-    <!-- Lightning Card -->
     <lightning-card title="ToDo List" style="width: 100%;">
         <!-- Sync Action -->
         <lightning-icon
@@ -16,7 +15,7 @@
             <lightning-layout-item size="12" padding="around-small">
                 <template if:true={processing}>
                     <lightning-spinner variant="brand" alternative-text="Loading Data" size="small"></lightning-spinner>
-            </template>
+                </template>
                 <!-- Iterating the ToDo Tasks and displaying them in a list -->
                 <ul class="slds-has-dividers_around-space">
                     <template for:each={todoTasks} for:item="todoTask">
